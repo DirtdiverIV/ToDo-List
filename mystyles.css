@@ -1,0 +1,14 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .buttons-div {
+    margin-left: auto;
+  }
+  
+  .modify-button,
+  .delete-button {
+    margin-left: 5px;
+  }
