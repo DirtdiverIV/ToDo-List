@@ -1,7 +1,4 @@
-let todos = [
-    { nombre: "gatomon", id: 1 },
-    { nombre: "nube", id: 2 }
-  ];
+let todos = [];
   
   function addTodo() {
     let inputValue = document.getElementById("todoInput").value;
@@ -14,14 +11,13 @@ let todos = [
     let list = document.getElementById("todoList");
     list.innerHTML = "";
   
-    for (let i = 0; i < todos.length; i++) {
-      let todo = todos[i];
+    for (let i = 0; i < todos.length; i++) {let todo = todos[i];
   
       let div = document.createElement('div');
       div.classList.add('todo-item');
   
       let li = document.createElement('li');
-      li.textContent = todo.nombre;
+       li.textContent = todo.nombre;
   
       let buttonsDiv = document.createElement('div');
       buttonsDiv.classList.add('buttons-div');
@@ -40,8 +36,8 @@ let todos = [
         deleteTodoById(todo.id);
       });
   
-      buttonsDiv.appendChild(modifyButton);
-      buttonsDiv.appendChild(deleteButton);
+    buttonsDiv.appendChild(modifyButton);
+    buttonsDiv.appendChild(deleteButton);
   
       div.appendChild(li);
       div.appendChild(buttonsDiv);
@@ -51,13 +47,27 @@ let todos = [
   }
   
   function modifyTodoById(id) {
-    // Aqui tengo que anadir la logica del boton
-    console.log("Modificar elemento con ID:", id);
+    let newName = prompt("Introduzca el nuevo nombre para la tarea: " + id);
+  if (newName) {
+    for (let i = 0; i < todos.length; i++) {
+      if (todos[i].id === id) {
+        todos[i].nombre = newName;
+        break;
+      }
+    }
+    showTodos();
+  }
   }
   
   function deleteTodoById(id) {
-    // Aqui tengo que anadir la logica del boton
-    console.log("Borrar elemento con ID:", id);
+    for (let i = 0; i < todos.length; i++) {
+      if (todos[i].id === id) {
+        todos.splice(i, 1);
+        break;
+      }
+    }
+    showTodos();
+    
   }
   
   document.getElementById('addButton').addEventListener('click', function(event) {
