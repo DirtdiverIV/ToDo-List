@@ -1,14 +1,90 @@
-.todo-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-  }
+body {
+  background-color: grey;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-content: center;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+
+.header {
+  background-color: rgb(54, 54, 54);
+  color: white;
+  padding: 3em;
+  border-radius: 10px;
+}
+
+.inputTask {
+  padding: 3em;
+  text-align: center;
+}
+
+li {
+display: flex;
+flex-direction: row;
+
+
+margin-top: 1em;
+background-color: grey;
+padding: 1em;
+color: white;
+border-radius: 10px;
+font-weight: bold;
+font-size: 24px;
+}
+
+.listDiv{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(54, 54, 54);
+  padding: 1em;
+  border-radius: 10px;
+}
+
+button {
+  margin-left: 1em;
+  margin-top: 1em;
   
-  .buttons-div {
-    margin-left: auto;
-  }
+}
+
+input {
+  padding: 1em;
+  border-radius: 10px;
+  border: 4px solid black;
+}
+
+#addButton {
+  padding: 1em;
+  background-color: rgb(76, 122, 76);
+  border-radius: 10px;
+  color: white;
+  border: 4px solid black;
   
-  .modify-button,
-  .delete-button {
-    margin-left: 5px;
-  }
+}
+
+.modify-button {
+  padding: 1em;
+  background-color: rgb(76, 122, 76);
+  border-radius: 10px;
+  color: white;
+  border-color: white;
+  font-weight: bold;
+  border: 4px solid white;
+
+}
+
+.delete-button {
+  padding: 1em;
+  background-color: rgb(134, 70, 70);
+  border-radius: 10px;
+  color: white;
+  border-color: white;
+  font-weight: bold;
+  border: 4px solid white;
+
+}

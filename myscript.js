@@ -47,7 +47,7 @@ let todos = [];
   }
   
   function modifyTodoById(id) {
-    let newName = prompt("Introduzca el nuevo nombre para la tarea: " + id);
+    let newName = prompt("Enter the new task name for task number: " + id);
   if (newName) {
     for (let i = 0; i < todos.length; i++) {
       if (todos[i].id === id) {
